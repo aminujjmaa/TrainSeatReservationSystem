@@ -1,0 +1,46 @@
+/* Container for the seat layout */
+.row-container {
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;
+  margin: 10px 0;
+}
+
+/* Styling for the row numbers */
+.row-number {
+  margin-right: 10px;
+  font-weight: bold;
+  display: inline-block;
+  width: 60px;
+  text-align: right;
+}
+
+/* Styling for individual seats */
+.seat {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Reserved seat styling (red color) */
+.seat.reserved {
+  background-color: red;
+  color: white;
+}
+
+/* Available seat styling (green color) */
+.seat.available {
+  background-color: lightgreen;
+}
+
+/* Centering the entire seat layout container */
+div {
+  text-align: center;
+}
