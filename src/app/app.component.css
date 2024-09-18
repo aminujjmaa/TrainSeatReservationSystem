@@ -1,46 +1,95 @@
-/* Container for the seat layout */
-.row-container {
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Dark background for the entire page */
+  color: #e0e0e0; /* Light text color */
+  margin: 0;
+  padding: 0;
+}
+
+/* Container Styles */
+.container {
   display: flex;
-  justify-content: center;  /* Center horizontally */
+  flex-direction: column;
   align-items: center;
+  padding: 20px;
+}
+
+/* Heading Styles */
+h1, h2, h3 {
+  color: #ffffff; /* White color for headings */
   margin: 10px 0;
 }
 
-/* Styling for the row numbers */
-.row-number {
-  margin-right: 10px;
-  font-weight: bold;
-  display: inline-block;
-  width: 60px;
-  text-align: right;
+/* Button Styles */
+button {
+  background-color: #1e88e5; /* Bright blue for buttons */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
 }
 
-/* Styling for individual seats */
+button:hover {
+  background-color: #1565c0; /* Darker blue for hover effect */
+}
+
+/* Row Container Styles */
+.row-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #333; /* Dark background for rows */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Row Number Styles */
+.row-number {
+  width: 80px;
+  font-weight: bold;
+  color: #ffffff; /* White color for row numbers */
+}
+
+/* Seat Styles */
 .seat {
+  display: inline-block;
   width: 40px;
   height: 40px;
+  line-height: 40px;
+  text-align: center;
   margin: 5px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid black;
   border-radius: 5px;
-  font-size: 14px;
   cursor: pointer;
 }
 
-/* Reserved seat styling (red color) */
-.seat.reserved {
-  background-color: red;
+.seat.available {
+  background-color: #4caf50; /* Green for available seats */
   color: white;
 }
 
-/* Available seat styling (green color) */
-.seat.available {
-  background-color: lightgreen;
+.seat.reserved {
+  background-color: #f44336; /* Red for reserved seats */
+  color: white;
 }
 
-/* Centering the entire seat layout container */
-div {
-  text-align: center;
+.seat:hover {
+  background-color: #1976d2; /* Blue for hover effect */
+  color: white;
+}
+
+/* Last Booked Seats Section */
+.last-booked-seats {
+  background-color: #333; /* Dark background for last booked seats */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.last-booked-seats h3 {
+  color: #ffffff; /* White color for headings in this section */
 }
