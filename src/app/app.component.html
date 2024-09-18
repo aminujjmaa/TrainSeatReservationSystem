@@ -1,11 +1,11 @@
-<div style="text-align:center">
+<div class="container">
   <h1>Train Seat Reservation System</h1>
 
   <div>
-    <label for="numSeats">Number of seats to book (1-7):</label>
+    <label for="numSeats" style="color: #ffffff;">Number of seats to book (1-7):</label>
     <input [(ngModel)]="numSeats" type="number" id="numSeats" min="1" max="7" />
     <button (click)="onReserveSeats()">Book Seats</button>
-    <button (click)="resetSeats()" style="margin-left: 10px;">Reset</button>
+    <button (click)="resetSeats()">Reset</button>
   </div>
 
   <div style="margin-top: 20px;">
@@ -20,10 +20,16 @@
     </div>
   </div>
 
-  <div *ngIf="lastBookedSeats.length > 0" style="margin-top: 20px;">
+  <div *ngIf="lastBookedSeats.length > 0" class="last-booked-seats">
     <h3>Last Booked Seats:</h3>
     <div *ngFor="let seat of lastBookedSeats">
       Row: {{ seat.row }}, Seat: {{ seat.seat }}
     </div>
   </div>
+</div>
+
+<div>
+  <p>
+    Source Code :  <a href=""></a>
+  </p>
 </div>
